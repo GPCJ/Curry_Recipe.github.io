@@ -47,7 +47,8 @@ header i {
 
 /* 공통 카드 스타일 (dl, ul 섹션 모두 적용) */
 .recipe-summary,
-.ingredients-section {
+.ingredients-section,
+.steps-section {
   background: #ffffff;
   padding: 25px;
   border-radius: 20px;
