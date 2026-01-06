@@ -118,3 +118,27 @@ header i {
 .section-box ul {
   padding-left: 20px;
 }
+
+.nutrition-table {
+  width: 100%;
+  border-collapse: collapse; /* 테두리 겹침 제거 */
+  margin: 15px 0;
+  font-size: 0.95rem;
+}
+
+.nutrition-table th {
+  background-color: #fcf8e3; /* 헤더 배경색 */
+  color: #8a6d3b;
+  padding: 12px;
+  border-bottom: 2px solid #f0ad4e;
+}
+
+.nutrition-table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  color: #444;
+}
+
+.nutrition-table tr:last-child td {
+  border-bottom: none;
+}
