@@ -46,10 +46,7 @@ header i {
 }
 
 /* 공통 카드 스타일 (dl, ul 섹션 모두 적용) */
-.recipe-summary,
-.ingredients-section,
-.steps-section,
-.tips-section {
+.section-box {
   background: #ffffff;
   padding: 25px;
   border-radius: 20px;
@@ -80,7 +77,7 @@ header i {
 }
 
 /* 재료 목록 (ul) 스타일 */
-.ingredients-section h3 {
+.section-box h3 {
   margin-top: 0;
   margin-bottom: 20px;
   border-bottom: 2px solid #fcf8e3;
@@ -112,12 +109,12 @@ header i {
 }
 
 /* 조리 순서 (ol) 스타일 */
-.steps-section ol {
+.section-box ol {
   padding: 0;
   margin-left: 40px;
   text-align: left; /* 텍스트는 왼쪽 정렬 */
 }
 
-.steps-section ul {
+.section-box ul {
   padding-left: 20px;
 }
