@@ -110,3 +110,14 @@ header i {
   border-bottom: 1px solid #f9f9f9;
   margin: 0px 0;
 }
+
+/* 조리 순서 (ol) 스타일 */
+.steps-section ol {
+  padding: 0;
+  margin-left: 40px;
+  text-align: left; /* 텍스트는 왼쪽 정렬 */
+}
+
+.steps-section ul {
+  padding-left: 20px;
+}
