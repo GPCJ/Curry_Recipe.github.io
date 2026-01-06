@@ -1,71 +1,111 @@
+/* 전체 페이지 배경 및 중앙 정렬 */
 body {
+  background-color: #fffaf0; /* 따뜻한 크림색 배경 */
   display: flex;
-  flex-direction: column; /* 요소를 위에서 아래로 쌓음 */
-  align-items: center; /* 가로축 중앙 정렬 */
-  text-align: center; /* 텍스트 내용 중앙 정렬 */
-  margin: 0;
-  padding: 20px;
-  background-color: #fffaf0; /* 따뜻한 카레 느낌 배경색 */
+  justify-content: center;
+  padding: 50px 20px;
+  font-family: 'Pretendard', sans-serif;
 }
 
-dl {
-  text-align: left; /* 정의 목록은 왼쪽 정렬 */
-  margin: 20px 0; /* 위아래 여백 추가 */
-}
-
-/* 이미지 크기가 너무 크면 화면 밖으로 나가지 않게 조절 */
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 15px; /* 이미지 모서리를 부드럽게 */
-  margin: 20px 0; /* 이미지 위아래 간격 */
-}
-
-/* 섹션 전체 중앙 정렬 */
-.ingredients-section {
+.recipe-container {
+  width: 100%;
+  max-width: 600px; /* 전체 너비 제한 */
   text-align: center;
-  margin: 40px auto;
-  padding: 20px;
-  max-width: 500px; /* 리스트가 너무 넓게 퍼지지 않도록 제한 */
 }
 
-h3 {
+/* 제목 스타일 */
+header h1 {
   color: #8a6d3b;
-  margin-bottom: 20px;
-  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+header h2 {
+  color: #c0a16b;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+header i {
+  color: #c0a16b;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
 }
 
-/* 리스트를 감싸는 박스 */
-.list-wrapper {
-  display: inline-block; /* 부모의 text-align: center 영향으로 중앙에 배치됨 */
-  text-align: left; /* 내부는 왼쪽 정렬하여 가독성 확보 */
-  background-color: #fff;
-  padding: 25px 40px;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  border-left: 5px solid #f0ad4e; /* 카레 느낌의 강조선 */
+/* 대표 이미지 스타일 */
+.recipe-main-img {
+  width: 100%;
+  max-width: 500px; /* 카드들과 너비 맞춤 */
+  margin: 0 auto 30px auto; /* 중앙 정렬 및 아래 섹션과의 간격 */
+  line-height: 0; /* 이미지 하단 미세한 공백 제거 */
+}
+
+.recipe-main-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px; /* 다른 카드들과 동일한 곡률 */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* 통일감 있는 그림자 */
+  object-fit: cover; /* 가로세로 비율 유지 */
+}
+
+/* 공통 카드 스타일 (dl, ul 섹션 모두 적용) */
+.recipe-summary,
+.ingredients-section {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05); /* 부드러운 그림자 */
+  margin-bottom: 30px; /* 섹션 간 간격 */
+  border: 1px solid #f3e5ab;
+}
+
+/* 요약 정보 (dl) 스타일 */
+.summary-list {
+  display: flex; /* 가로로 배치 */
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.summary-list dt {
+  font-size: 0.85rem;
+  color: #999;
+  width: 100%; /* 이름이 위로 */
+  margin-bottom: 5px;
+}
+
+.summary-list dd {
+  font-weight: bold;
+  margin: 0 0 15px 0; /* 값이 아래로 */
+  font-size: 1.1rem;
+}
+
+/* 재료 목록 (ul) 스타일 */
+.ingredients-section h3 {
+  color: #8a6d3b;
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #fcf8e3;
+  padding-bottom: 10px;
 }
 
 .ingredient-list {
-  list-style-type: none; /* 기본 점 제거 */
+  list-style: none;
   padding: 0;
-  margin: 0;
+  text-align: left; /* 텍스트는 왼쪽 정렬 */
+  display: inline-block; /* 중앙 배치를 위해 */
+  width: 90%;
 }
 
 .ingredient-list li {
-  padding: 8px 0;
-  border-bottom: 1px dashed #eee; /* 항목 간 구분선 */
-  font-size: 1.1rem;
+  padding: 10px 0;
+  border-bottom: 1px solid #f9f9f9;
   color: #444;
 }
 
 .ingredient-list li:last-child {
-  border-bottom: none; /* 마지막 항목 선 제거 */
+  border-bottom: none;
 }
 
-/* 체크 표시 아이콘 효과 (가상 요소) */
-.ingredient-list li::before {
-  content: '✔️';
-  margin-right: 10px;
-  font-size: 0.9rem;
+.ingredient-list h4 {
+  padding: 0px 0;
+  border-bottom: 1px solid #f9f9f9;
+  margin: 0px 0;
 }
