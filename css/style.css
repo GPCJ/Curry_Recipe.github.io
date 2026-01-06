@@ -48,7 +48,8 @@ header i {
 /* 공통 카드 스타일 (dl, ul 섹션 모두 적용) */
 .recipe-summary,
 .ingredients-section,
-.steps-section {
+.steps-section,
+.tips-section {
   background: #ffffff;
   padding: 25px;
   border-radius: 20px;
@@ -80,7 +81,6 @@ header i {
 
 /* 재료 목록 (ul) 스타일 */
 .ingredients-section h3 {
-  color: #8a6d3b;
   margin-top: 0;
   margin-bottom: 20px;
   border-bottom: 2px solid #fcf8e3;
